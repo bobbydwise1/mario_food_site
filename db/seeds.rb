@@ -20,4 +20,15 @@ end
 
 product_list.each do |name, cost, origin|
   Product.create(name: name, cost: cost, origin: origin)
-enabled
+end
+
+index = 1
+review_list = []
+while index < 251 do
+  review_list.push([Faker::Food.unique.dish, Faker::Lorem.paragraph(2, true, 1), rand(1..5).floor, rand(1..50).floor])
+  index += 1
+end
+
+review_list.each do |author, content_body, rating, product_id|
+  Review.create(author: author, content_body: content_body, rating, product_id: rating, product_id)
+end
