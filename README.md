@@ -21,11 +21,11 @@ _Setup requires the installation of Ruby, Rails, and Postgres.  An additional Ru
   "$ bundle install
 * Your computer must have Postgres installed.  To restore the SQL database, type the following commands at the terminal window of the project directory:
 
-  "$ createdb food_review
+  "$ createdb mario_food_site
 
-  "$ psql food_review < my_database.sql
+  "$ psql mario_food_site < my_database.sql
 
-  "$ createdb -T food_review food_review_test
+  "$ createdb -T mario_food_site mario_food_site_test
 * Start the Postgres server on your local machine.  Do this by going to a new terminal window at the project directory, and typing:
 
   "$ postgres
@@ -42,7 +42,7 @@ _Setup requires the installation of Ruby, Rails, and Postgres.  An additional Ru
 
 ## Technologies Used
 
-_Ruby, Rails, Sinatra framework, Bootstrap, Atom, Postgres, SQL , HTML, Git._
+_Ruby, Rails, Bootstrap, Atom, Postgres, SQL , HTML, Git._
 
 ## Requirements
 
@@ -81,7 +81,6 @@ You'll be demoing this site to the CEO of Mario's Specialty Foods, so it should 
 ## Specifications
 
 * The required tests for inputs and outputs are denoted:  TBD
-
 
 * TBD
 

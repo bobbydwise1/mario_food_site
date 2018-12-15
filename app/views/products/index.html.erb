@@ -3,7 +3,7 @@
   <h4>products:</h4>
   <% @products.each do |product| %>
 
-    <li><%= link_to product.name, product_path(product) %></li>
+    <li><%= link_to product.name, product_path(product) %>|<%= product.cost%>|<%=product.origin%></li>
 
   <% end %>
 
