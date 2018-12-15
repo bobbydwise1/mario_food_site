@@ -23,7 +23,7 @@ _Setup requires the installation of Ruby, Rails, and Postgres.  An additional Ru
 
   "$ createdb mario_food_site
 
-  "$ psql mario_food_site < my_database.sql
+  "$ psql mario_food_site < database_backup.sql
 
   "$ createdb -T mario_food_site mario_food_site_test
 * Start the Postgres server on your local machine.  Do this by going to a new terminal window at the project directory, and typing:
@@ -35,14 +35,18 @@ _Setup requires the installation of Ruby, Rails, and Postgres.  An additional Ru
   "$ postgres -U postgres
 * If Postgres is asking for a password, enter "123456".
 * To run the test cases, type at the terminal: $ rspec
+
 * To run the program itself, go to the command line, and set the current working directory the same as the project's folder.  Type the following at the terminal:
 
   "$ ruby app.rb
 * Afterwards, open your web browser and head to the address https://localhost:3000 to start the application.
 
+* If there is database corruption, at the command line of the working project folder, reset the database to it's default entires by the following:
+  "$ rake db:reset
+
 ## Technologies Used
 
-_Ruby, Rails, Bootstrap, Atom, Postgres, SQL , HTML, Git._
+_Ruby, Rails, Bootstrap, Atom, Postgres, SQL, HTML, Git._
 
 ## Requirements
 
@@ -86,7 +90,12 @@ You'll be demoing this site to the CEO of Mario's Specialty Foods, so it should 
 
 ## Known bugs
 
-* To be determined.
+* Integration testing has not been implemented.
+* There are no integration tests.  (Using rspec only checks for database entries.)
+* The landing page does not meet the requirements.
+* There are no scopes for the user to re-arrange the product and review data.
+* There is no review content_body validation to check for string length of 50-250 characters.
+* There is no CSS.
 
 ### License
 
